@@ -1,0 +1,39 @@
+.loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  position: fixed;
+}
+
+.finish {
+  animation: finishLoad 0.9s forwards linear;
+  @keyframes spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+.spinner {
+  width: 300px;
+  height: 300px;
+  border: 5px solid red;
+  animation: spinner 0.9s infinite linear;
+  border-bottom: 10px solid transparent;
+  border-radius: 50%;
+
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
